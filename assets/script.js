@@ -11,19 +11,26 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword () {
   window.alert ('Indicate the parameters of your password.');
 
-  var lengthConfirm = function () {
-    var length = prompt ('How many characters would you like?');
+  var passwordLength = function() {
+    var length = parseInt(prompt("How many characters would you like? Please enter a number from 8 to 128."));
+  
     // ensure user entry is acceptable response
-    if (length < 8 || length > 128) {
-      false
+    while (length < 8 || length > 128 || !Number.isInteger(length)) {
       length = parseInt(prompt("Please enter a valid number from 8 to 128."));
-    } else { 
-      true
     }
-    };
+    return length;
+  };
 
-  var lengthConfirm
-    
+  var lengthConfirm= passwordLength(); 
+
+// function checkLength () {
+//     var lengthConfirm = prompt ('How many characters would you like?');
+//     // ensure user entry is acceptable response
+//     if (lengthConfirm < 8 || lengthConfirm > 128) {
+//       alert("Please enter a valid number from 8 to 128.");
+//       checkLength ();
+//     }
+//   };
 
   var passCase = confirm('Include Uppercase Letters?');
     if(passCase) {
