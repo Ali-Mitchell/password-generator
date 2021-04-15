@@ -1,7 +1,5 @@
 # Password Generator
 
-## HTML, CSS, JAVA 
-
 Password is generated based on parameters input by user. The generator includes parameters that the user can choose including special characters, numbers, upper and lower case letters. Passwords must be between 8 and 128 characters. 
 
 ## Created with 
