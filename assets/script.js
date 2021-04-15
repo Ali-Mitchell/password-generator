@@ -11,11 +11,19 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword () {
   window.alert ('Indicate the parameters of your password.');
 
-  var lengthConfirm = prompt ('How many characters would you like?');
-  // ensure user entry is acceptable response
-  if (lengthConfirm < 8 || lengthConfirm > 128) {
-    length = parseInt(prompt("Please enter a valid number from 8 to 128."));
-  }
+  var lengthConfirm = function () {
+    var length = prompt ('How many characters would you like?');
+    // ensure user entry is acceptable response
+    if (length < 8 || length > 128) {
+      false
+      length = parseInt(prompt("Please enter a valid number from 8 to 128."));
+    } else { 
+      true
+    }
+    };
+
+  var lengthConfirm
+    
 
   var passCase = confirm('Include Uppercase Letters?');
     if(passCase) {
