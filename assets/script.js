@@ -12,6 +12,10 @@ function generatePassword () {
   window.alert ('Indicate the parameters of your password.');
 
   var lengthConfirm = prompt ('How many characters would you like?');
+  // ensure user entry is acceptable response
+  if (lengthConfirm < 8 || lengthConfirm > 128) {
+    length = parseInt(prompt("Please enter a valid number from 8 to 128."));
+  }
 
   var passCase = confirm('Include Uppercase Letters?');
     if(passCase) {
@@ -38,7 +42,8 @@ function generatePassword () {
     }
   
     return password.join("")
-}
+};
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
