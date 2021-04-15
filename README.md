@@ -6,9 +6,9 @@ Password is generated based on parameters input by user. The generator includes 
 
 ## Created with 
 
-*html 
-*css
-*Javascript 
+html 
+css 
+javascript
 
 ## link to live site
 https://ali-mitchell.github.io/password-generator/
